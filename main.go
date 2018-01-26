@@ -45,6 +45,7 @@ type Uploader struct {
 }
 
 var dblock sync.Mutex
+var firstpass bool
 
 func parseTags(tagSelector *goquery.Selection) (tags []*Tag) {
 	for i := range tagSelector.Nodes {
@@ -91,6 +92,11 @@ func main() {
 	jobChan := make(chan bool, 20)
 	// Only match on #searchResult, a table
 	c.OnHTML("#searchResult tbody", func(e *colly.HTMLElement) {
+		pass := false
+		if firstpass == false {
+			pass = true
+			firstpass = true
+		}
 		// Loop over each row
 		url, _ := e.DOM.Find("div.detName a:first-of-type").Attr("href")
 		urlParts := strings.Split(url, "/")
@@ -108,8 +114,11 @@ func main() {
 				}
 				// This is is pretty old, assume nothing older than this is
 				// going to show up.
-				log.Println("All caught up with recent torrents")
-				break
+				if !pass {
+					log.Println("All caught up with recent torrents")
+					break
+				}
+				continue
 			}
 			idStr := strconv.FormatInt(id, 10)
 			jobChan <- true
@@ -279,6 +288,7 @@ func main() {
 
 	// Allow fetching the recent feed multiple times
 	c.AllowURLRevisit = true
+	log.Println("Ready to rock")
 	for {
 		jobChan <- true
 		var res []beegoorm.Params
@@ -296,5 +306,5 @@ func main() {
 	//c.Visit("http://uj3wazyk5u4hnvtk.onion/torrent/7842871")
 
 	// Wait for all of the connections to finish
-	c.Wait()
+	//c.Wait()
 }
