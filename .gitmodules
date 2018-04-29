@@ -1,0 +1,60 @@
+[submodule "vendor/github.com/gocolly/colly"]
+	path = vendor/github.com/gocolly/colly
+	url = https://github.com/gocolly/colly
+[submodule "vendor/github.com/PuerkitoBio/goquery"]
+	path = vendor/github.com/PuerkitoBio/goquery
+	url = https://github.com/PuerkitoBio/goquery
+[submodule "vendor/github.com/antchfx/htmlquery"]
+	path = vendor/github.com/antchfx/htmlquery
+	url = https://github.com/antchfx/htmlquery
+[submodule "vendor/github.com/antchfx/xpath"]
+	path = vendor/github.com/antchfx/xpath
+	url = https://github.com/antchfx/xpath
+[submodule "vendor/github.com/antchfx/xmlquery"]
+	path = vendor/github.com/antchfx/xmlquery
+	url = https://github.com/antchfx/xmlquery
+[submodule "vendor/github.com/VividCortex/gohistogram"]
+	path = vendor/github.com/VividCortex/gohistogram
+	url = https://github.com/VividCortex/gohistogram
+[submodule "vendor/github.com/andybalholm/cascadia"]
+	path = vendor/github.com/andybalholm/cascadia
+	url = https://github.com/andybalholm/cascadia
+[submodule "vendor/github.com/astaxie/beego"]
+	path = vendor/github.com/astaxie/beego
+	url = https://github.com/astaxie/beego
+[submodule "vendor/github.com/go-kit/kit"]
+	path = vendor/github.com/go-kit/kit
+	url = https://github.com/go-kit/kit
+[submodule "vendor/golang.org/x/net"]
+	path = vendor/golang.org/x/net
+	url = https://go.googlesource.com/net
+[submodule "vendor/github.com/go-stack/stack"]
+	path = vendor/github.com/go-stack/stack
+	url = https://github.com/go-stack/stack
+[submodule "vendor/github.com/influxdata/influxdb"]
+	path = vendor/github.com/influxdata/influxdb
+	url = https://github.com/influxdata/influxdb
+[submodule "vendor/golang.org/x/text"]
+	path = vendor/golang.org/x/text
+	url = https://go.googlesource.com/text
+[submodule "vendor/github.com/gobwas/glob"]
+	path = vendor/github.com/gobwas/glob
+	url = https://github.com/gobwas/glob
+[submodule "vendor/github.com/kennygrant/sanitize"]
+	path = vendor/github.com/kennygrant/sanitize
+	url = https://github.com/kennygrant/sanitize
+[submodule "vendor/github.com/saintfish/chardet"]
+	path = vendor/github.com/saintfish/chardet
+	url = https://github.com/saintfish/chardet
+[submodule "vendor/github.com/temoto/robotstxt"]
+	path = vendor/github.com/temoto/robotstxt
+	url = https://github.com/temoto/robotstxt
+[submodule "vendor/google.golang.org/appengine"]
+	path = vendor/google.golang.org/appengine
+	url = https://github.com/golang/appengine
+[submodule "vendor/github.com/golang/protobuf"]
+	path = vendor/github.com/golang/protobuf
+	url = https://github.com/golang/protobuf
+[submodule "vendor/github.com/mattn/go-sqlite3"]
+	path = vendor/github.com/mattn/go-sqlite3
+	url = https://github.com/mattn/go-sqlite3
